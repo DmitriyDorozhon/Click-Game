@@ -1,0 +1,23 @@
+<div class="container">
+  <game-menu
+    [timerDigit]="timer"
+    [PlayerScore]="countPlayerPoint"
+    [ComputerScore]="countComputerPoint"
+    (getData)="starter($event)"
+
+  ></game-menu>
+  <div class="game-field">
+    <div class="game-field__item"
+         *ngFor="let item of [].constructor(100);let idx=index"
+         (click)="playerClick($event)"
+         [id]="idx"
+         #item
+    ></div>
+  </div>
+</div>
+<modal-window
+  *ngIf="modalVisible"
+  [computerScore]="countComputerPoint"
+  [playerScore]="countPlayerPoint"
+  (getRestart)="restart($event)"
+></modal-window>

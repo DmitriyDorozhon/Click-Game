@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="score-block">
+    <h2 class="score-block__title">SCORE</h2>
+    <div class="score-block__container">
+      <div class="score-block__score">
+        Player
+        <p>{{PlayerScore}} / 10</p>
+      </div>
+      <div class="score-block__score">
+        Computer
+        <p>{{ComputerScore}} / 10</p>
+      </div>
+    </div>
+  </div>
+  <form
+    *ngIf="visibleBasicBlock;else timerBlock"
+    class="gameMenuForm"
+    [formGroup]="gameMenuForm"
+  >
+    <label class="timeoutLabel">Enter time in milliseconds <input
+      (input)="checkValid()"
+      formControlName="getTimeout"
+      type="text" class="gameMenuForm__timeoutInput">
+    </label>
+    <div class="invalid"
+         *ngIf="gameMenuForm.controls['getTimeout'].dirty && gameMenuForm.controls['getTimeout'].invalid ">
+      Please enter a number with at least three digits.
+    </div>
+  </form>
+  <button
+    *ngIf="visibleBasicBlock"
+    (click)="clickOnStart()"
+    class="startBtn"
+    [disabled]="!valid"
+  >
+    {{!valid ? 'FILL IN INPUT' : 'Start Game'}}</button>
+  <ng-template #timerBlock>
+    <div
+      class="timerStart">
+      {{timerDigit < 1 ? '' : timerDigit}}
+    </div>
+  </ng-template>
+</div>
+

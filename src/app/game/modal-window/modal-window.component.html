@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="modal-window">
+    <h2
+      [ngClass]="{'playerWin':playerScore>=10,computerWin:computerScore>=10}">
+
+      <!--    "playerWin":playerScore>=10,-->
+      <!--    computerWin:computerScore>=10;-->
+
+
+      {{playerScore >= 10 ? 'Player win' : 'Computer win'}}</h2>
+    <div class="score-block">
+      <div class="score-block__score">
+        Player - {{playerScore}} / 10
+      </div>
+      <div class="score-block__score">
+        Computer - {{computerScore}} / 10
+      </div>
+    </div>
+    <div class="modal-window__btn-case">
+      <button (click)="newGame()" class="modal-window__button">New Game</button>
+      <button (click)="getRestart.emit(0)" class="modal-window__button">Restart</button>
+    </div>
+  </div>
+</div>
+

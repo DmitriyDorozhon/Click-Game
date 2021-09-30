@@ -1,0 +1,47 @@
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 8em;
+}
+
+.game-field__item,.inGame
+,.player,.computer{
+  border: #eabdbd solid 1px;
+  width:44px;
+  height: 44px;
+  user-select: none;
+  cursor: pointer;
+}
+.game-field{
+  display: flex;
+  margin-left: 1em;
+  width: 440px;
+  height: 440px;
+  min-width: 440px;
+  min-height: 440px;
+  flex-wrap: wrap;
+  &__item
+  {
+    background: -webkit-linear-gradient(180deg, rgb(44, 35, 187), rgb(82, 182, 182));
+    background: -moz-linear-gradient(180deg, rgb(44, 35, 187), rgb(82, 182, 182));
+    background: linear-gradient(180deg, rgb(44, 35, 187), rgb(82, 182, 182));
+  }
+
+}
+.player{
+  background: -webkit-linear-gradient(180deg, rgb(8, 165, 48), rgb(82, 182, 138));
+  background: -moz-linear-gradient(180deg, rgb(8, 165, 48), rgb(82, 182, 138));
+  background: linear-gradient(180deg, rgb(8, 165, 48), rgb(82, 182, 138));
+}
+.inGame{
+  background: -webkit-linear-gradient(180deg, rgb(204, 214, 39), rgb(182, 166, 82));
+  background: -moz-linear-gradient(180deg, rgb(204, 214, 39), rgb(182, 166, 82));
+  background: linear-gradient(180deg, rgb(204, 214, 39), rgb(182, 166, 82));
+}
+
+.computer{
+  background: -webkit-linear-gradient(180deg, rgb(221, 48, 31), rgb(111, 34, 27));
+  background: -moz-linear-gradient(180deg, rgb(221, 48, 31), rgb(111, 34, 27));
+  background: linear-gradient(180deg, rgb(221, 48, 31), rgb(111, 34, 27));
+}

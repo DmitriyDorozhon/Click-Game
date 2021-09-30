@@ -1,0 +1,113 @@
+.container  {
+  background: -webkit-linear-gradient(180deg, rgb(95, 99, 98), rgb(54, 54, 54));
+  background: -moz-linear-gradient(180deg, rgb(95, 99, 98), rgb(54, 54, 54));
+  background: linear-gradient(180deg, rgb(95, 99, 98), rgb(54, 54, 54));
+  width: 30em;
+  max-height: 403px;
+  margin: 0 auto;
+  border-radius: 2em;
+  padding: 4px;
+  user-select: none;
+}
+.gameMenuForm{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 105px;
+ &__timeoutInput{
+   outline: none;
+}
+}
+.timeoutLabel{
+  font-size: 1.4em;
+  color: aliceblue;
+  display: inline-block;
+  margin: 0 auto;
+}
+.startBtn{
+  display: block;
+  margin:5px auto 10px auto;
+  width: 12em;
+  height: 6em;
+  outline: none;
+  border-radius: 2em;
+  border: none;
+  font-weight: 600;
+  color: #f9f0f0;
+  background: #69b769;
+  font-size: 1em;
+  cursor: pointer;
+}
+.startBtn:disabled{
+  background: rgba(210, 44, 44, 0.53);
+  color: #f2f2f2;
+}
+.ng-valid:not(form){
+  outline: none;
+  border-radius: 3px;
+  border: 3px green solid;
+}
+.invalid,.valid{
+  position: relative;
+  border-radius: 5px;
+  padding: 4px;
+  color: #000000;
+  font-size: 1.2em;
+  width: 22em;
+  margin: 4px auto;
+
+}
+.invalid{
+  background: rgba(246, 125, 125, 0.63);
+}
+.invalid::before,
+.valid::before{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+}
+
+.valid{
+  background: rgba(68, 255, 81, 0.29);
+  right: -5.3em;
+}
+.invalid::before{
+  border-bottom: 12px solid  rgba(246, 125, 125, 0.63);
+  top: -0.6em;
+  right: 2em;
+}
+
+.valid::before{
+  border-bottom: 12px solid rgba(68, 255, 81, 0.29);
+  top: -0.6em;
+  right: 1em;
+}
+.timerStart{
+  display: flex;
+  color: aliceblue;
+  font-size: 111px;
+  justify-content: center;
+}
+.score-block{
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  &__title{
+    margin: 0 auto;
+  }
+  &__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+    &__score{
+      font-size: 2em;
+      display: flex;
+      flex-direction: column;
+    }&__score p{
+           margin: 0 auto;
+    }
+}

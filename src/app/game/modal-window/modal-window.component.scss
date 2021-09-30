@@ -1,0 +1,51 @@
+.wrapper{
+  background-color: #9b9b9bb3;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.modal-window{
+  background: -webkit-linear-gradient(180deg, rgb(95, 99, 98), rgb(54, 54, 54));
+  background: -moz-linear-gradient(180deg, rgb(95, 99, 98), rgb(54, 54, 54));
+  background: linear-gradient(180deg, rgb(95, 99, 98), rgb(54, 54, 54));
+  height: 400px;
+  width: 600px;
+  margin: 29vh auto 0 auto;
+  border-radius: 4em;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  &__btn-case{
+    margin: 0 auto;
+  }
+  &__button{
+    margin: 0 22px;
+    padding: 6px;
+    font-size: 20px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+.playerWin,.computerWin{
+  margin: 0 auto;
+  font-size: 50px;
+}
+.playerWin{
+  color: #1ec41e;
+}
+.computerWin{
+  color: red;
+}
+.score-block{
+  margin:0 auto 35px auto ;
+
+  &__score{
+    font-size: 2.5em;
+    color: #f2f2f2;
+  }
+}
